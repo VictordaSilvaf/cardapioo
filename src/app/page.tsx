@@ -12,6 +12,7 @@ import {
   
 } from '@heroicons/react/20/solid'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const navigation = [
   { name: 'Product', href: '#' },
@@ -219,6 +220,9 @@ function classNames(...classes: (string | string[])[]) {
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+  console.log('mobileMenuOpen', mobileMenuOpen)
+  // const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
     <div className="bg-white">
       {/* Header */}
@@ -227,10 +231,12 @@ export default function Home() {
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img
+              <Image
                 alt=""
                 src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
                 className="h-8 w-auto"
+                width={40}
+                height={40}
               />
             </a>
           </div>
@@ -263,7 +269,7 @@ export default function Home() {
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
-                <img
+                <Image
                   alt=""
                   src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
                   className="h-8 w-auto"
@@ -386,9 +392,11 @@ export default function Home() {
                   clipPath="url(#2ade4387-9c63-4fc4-b754-10e687a0d332)"
                   transform="translate(24 24)"
                 >
-                  <img
+                  <Image
                     alt=""
                     src="https://tailwindcss.com/plus-assets/img/component-images/mobile-app-screenshot.png"
+                    height={684}
+                    width={316}
                   />
                 </foreignObject>
               </svg>
@@ -399,35 +407,35 @@ export default function Home() {
         {/* Logo cloud */}
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-12 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-            <img
+            <Image
               alt="Transistor"
               src="https://tailwindcss.com/plus-assets/img/logos/158x48/transistor-logo-gray-400.svg"
               width={158}
               height={48}
               className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
             />
-            <img
+            <Image
               alt="Reform"
               src="https://tailwindcss.com/plus-assets/img/logos/158x48/reform-logo-gray-400.svg"
               width={158}
               height={48}
               className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
             />
-            <img
+            <Image
               alt="Tuple"
               src="https://tailwindcss.com/plus-assets/img/logos/158x48/tuple-logo-gray-400.svg"
               width={158}
               height={48}
               className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
             />
-            <img
+            <Image
               alt="SavvyCal"
               src="https://tailwindcss.com/plus-assets/img/logos/158x48/savvycal-logo-gray-400.svg"
               width={158}
               height={48}
               className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
             />
-            <img
+            <Image
               alt="Statamic"
               src="https://tailwindcss.com/plus-assets/img/logos/158x48/statamic-logo-gray-400.svg"
               width={158}
@@ -450,7 +458,7 @@ export default function Home() {
                   nulla. Ac euismod vel sit maecenas.
                 </p>
               </div>
-              <img
+              <Image
                 alt="Product screenshot"
                 src="https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png"
                 width={2432}
@@ -636,16 +644,18 @@ export default function Home() {
                     <p>{`“${featuredTestimonial.body}”`}</p>
                   </blockquote>
                   <figcaption className="flex items-center gap-x-4 border-t border-gray-900/10 px-6 py-4">
-                    <img
+                    <Image
                       alt=""
                       src={featuredTestimonial.author.imageUrl}
                       className="size-10 flex-none rounded-full bg-gray-50"
+                      width={40}
+                      height={40}
                     />
                     <div className="flex-auto">
                       <div className="font-semibold">{featuredTestimonial.author.name}</div>
                       <div className="text-gray-600">{`@${featuredTestimonial.author.handle}`}</div>
                     </div>
-                    <img alt="" src={featuredTestimonial.author.logoUrl} className="h-10 w-auto flex-none" />
+                    <Image alt="" src={featuredTestimonial.author.logoUrl} className="h-10 w-auto flex-none" height={40} width={40} />
                   </figcaption>
                 </figure>
                 {testimonials.map((columnGroup, columnGroupIdx) => (
@@ -670,10 +680,12 @@ export default function Home() {
                               <p>{`“${testimonial.body}”`}</p>
                             </blockquote>
                             <figcaption className="mt-6 flex items-center gap-x-4">
-                              <img
+                              <Image
                                 alt=""
                                 src={testimonial.author.imageUrl}
                                 className="size-10 rounded-full bg-gray-50"
+                                height={40}
+                                width={40}
                               />
                               <div>
                                 <div className="font-semibold">{testimonial.author.name}</div>
@@ -696,10 +708,12 @@ export default function Home() {
       <footer className="mt-32 bg-gray-900 sm:mt-56">
         <div className="mx-auto max-w-7xl px-6 pt-16 pb-8 sm:pt-24 lg:px-8 lg:pt-32">
           <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-            <img
+            <Image
               alt="Company name"
               src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
               className="h-9"
+              width={36}
+              height={36}
             />
             <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
               <div className="md:grid md:grid-cols-2 md:gap-8">
