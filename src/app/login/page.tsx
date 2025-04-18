@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { login, signup } from "./actions";
+import { login } from "./actions";
 import Link from "next/link";
 
 export default function LoginPage() {

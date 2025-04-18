@@ -2,12 +2,7 @@
 
 import { useState } from 'react'
 
-import {
-  Dialog,
-  DialogContent,
-} from "@/components/ui/dialog"
-
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon } from '@heroicons/react/24/outline'
 import {
   ArrowPathIcon,
   ChevronRightIcon,
