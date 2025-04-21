@@ -52,9 +52,9 @@ export default function Header() {
         <header className="fixed inset-x-0 top-0 z-50 px-8 py-4">
             <nav aria-label="Global" className="flex items-center justify-between p-4 lg:px-8 bg-white rounded-full">
                 <div className="flex lg:flex-1">
-                    <a href="/" className="-m-1.5 p-1.5">
+                    <Link href="/" className="-m-1.5 p-1.5">
                         <span className="uppercase font-bold text-xl text-vermilion-600">Mynu</span>
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="flex lg:hidden">
