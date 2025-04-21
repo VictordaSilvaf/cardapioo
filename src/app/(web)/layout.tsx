@@ -19,7 +19,9 @@ export default function RootLayout({
 
       <div className="bg-neutral-100 min-h-screen h-full">
         {children}
-        <Footer />
+        <div className="pt-32 sm:pt-56 bg-neutral-100">
+          <Footer />
+        </div>
       </div>
     </>
   );

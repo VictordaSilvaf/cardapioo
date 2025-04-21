@@ -93,7 +93,7 @@ const footerNavigation = {
 
 export default function Footer() {
     return (
-        <footer className="mt-32 bg-pampas-300 sm:mt-56">
+        <footer className="bg-pampas-300">
             <div className="mx-auto max-w-7xl px-6 pt-16 pb-8 sm:pt-24 lg:px-8 lg:pt-32">
                 <div className="xl:grid xl:grid-cols-3 xl:gap-8">
                     <Image

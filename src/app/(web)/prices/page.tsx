@@ -195,7 +195,7 @@ export default function Prices() {
                           <div className="text-sm">
                             <p className={tier.featured ? 'text-gray-900' : 'text-white'}>BRL</p>
                             <p
-                              className={tier.featured ? 'text-gray-500' : 'text-gray-400'}
+                              className={tier.featured ? 'text-gray-500' : 'text-white/80'}
                             >{`Cobrança ${frequency.label}`}</p>
                           </div>
                         </div>
@@ -227,7 +227,7 @@ export default function Prices() {
                               <CheckIcon
                                 aria-hidden="true"
                                 className={classNames(
-                                  tier.featured ? 'text-vermilion-600' : 'text-gray-500',
+                                  tier.featured ? 'text-vermilion-600' : 'text-pampas-200',
                                   'h-6 w-5 flex-none',
                                 )}
                               />

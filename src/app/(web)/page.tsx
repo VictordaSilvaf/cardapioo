@@ -2,6 +2,7 @@
 
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
+
 import {
   ArrowPathIcon,
   ChevronRightIcon,
@@ -211,9 +212,9 @@ export default function Home() {
                 >
                   <Image
                     alt=""
-                    src="https://tailwindcss.com/plus-assets/img/component-images/mobile-app-screenshot.png"
-                    height={684}
-                    width={316}
+                    src={"/dash.jpeg"}
+                    fill={true}
+                    className='h-full object-cover'
                   />
                 </foreignObject>
               </svg>
@@ -276,7 +277,7 @@ export default function Home() {
               </div>
               <Image
                 alt="Product screenshot"
-                src="https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png"
+                src="/dashWeb.jpg"
                 width={2432}
                 height={1442}
                 className="relative -z-20 max-w-xl min-w-full rounded-xl shadow-xl ring-1 ring-white/10 lg:row-span-4 lg:w-[64rem] lg:max-w-none"
