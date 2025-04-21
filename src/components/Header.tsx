@@ -19,6 +19,7 @@ import {
 import { Button } from "./ui/button";
 import { LayoutDashboardIcon, UserIcon } from "lucide-react";
 import { usePathname } from "next/navigation";
+import Logo from "./Logo";
 
 
 const navigation = [
@@ -52,7 +53,7 @@ export default function Header() {
             <nav aria-label="Global" className="flex items-center justify-between p-4 lg:px-8 bg-white rounded-full">
                 <div className="flex lg:flex-1">
                     <Link href="/" className="-m-1.5 p-1.5">
-                        <span className="uppercase font-bold text-xl text-vermilion-600">Mynu</span>
+                        <Logo />
                     </Link>
                 </div>
 

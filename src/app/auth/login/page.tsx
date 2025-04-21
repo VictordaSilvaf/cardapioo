@@ -1,20 +1,15 @@
-import Image from "next/image";
 import { login } from "./actions";
 import Link from "next/link";
+import Logo from "@/components/Logo";
+import { Button } from "@/components/ui/button";
 
 export default function LoginPage() {
     return (
         <>
-            <div className="flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8">
+            <div className="flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8 bg-pampas-200">
                 <div className="sm:mx-auto sm:w-full sm:max-w-md">
-                    <Image
-                        alt="Sua Empresa"
-                        src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-                        className="mx-auto h-10 w-auto"
-                        width={40}
-                        height={40}
-                    />
-                    <h2 className="mt-6 text-center text-2xl/9 font-bold tracking-tight text-gray-900">
+                    <div className="mx-auto flex justify-center items-center"><Logo /></div>
+                    <h2 className="mt-6 text-center text-2xl/9 font-bold tracking-tight text-pampas-900">
                         Faça login na sua conta
                     </h2>
                 </div>
@@ -33,7 +28,7 @@ export default function LoginPage() {
                                         type="email"
                                         required
                                         autoComplete="email"
-                                        className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                                        className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-vermilion-600 sm:text-sm/6"
                                     />
                                 </div>
                             </div>
@@ -49,7 +44,7 @@ export default function LoginPage() {
                                         type="password"
                                         required
                                         autoComplete="current-password"
-                                        className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                                        className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-vermilion-600 sm:text-sm/6"
                                     />
                                 </div>
                             </div>
@@ -62,7 +57,7 @@ export default function LoginPage() {
                                                 id="remember-me"
                                                 name="remember-me"
                                                 type="checkbox"
-                                                className="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                                className="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-vermilion-600 checked:bg-vermilion-600 indeterminate:border-vermilion-600 indeterminate:bg-vermilion-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vermilion-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
                                             />
                                             <svg
                                                 fill="none"
@@ -92,20 +87,17 @@ export default function LoginPage() {
                                 </div>
 
                                 <div className="text-sm/6">
-                                    <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
+                                    <a href="#" className="font-semibold text-vermilion-600 hover:text-vermilion-500">
                                         Esqueceu a senha?
                                     </a>
                                 </div>
                             </div>
 
                             <div>
-                                <button
+                                <Button
                                     formAction={login}
                                     type="submit"
-                                    className="cursor-pointer flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                                >
-                                    Entrar
-                                </button>
+                                    className="w-full">Entrar</Button>
                             </div>
                         </form>
 
@@ -122,7 +114,7 @@ export default function LoginPage() {
                             <div className="mt-6 grid grid-cols-1 gap-4">
                                 <a
                                     href="#"
-                                    className="flex w-full items-center justify-center gap-3 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-xs ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus-visible:ring-transparent"
+                                    className="flex w-full items-center justify-center gap-3 rounded-full bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-xs ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus-visible:ring-transparent"
                                 >
                                     <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5">
                                         <path
@@ -147,7 +139,7 @@ export default function LoginPage() {
 
                                 <a
                                     href="#"
-                                    className="flex w-full items-center justify-center gap-3 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-xs ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus-visible:ring-transparent"
+                                    className="flex w-full items-center justify-center gap-3 rounded-full bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-xs ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus-visible:ring-transparent"
                                 >
                                     <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5">
                                         <path
@@ -163,7 +155,7 @@ export default function LoginPage() {
 
                     <p className="mt-10 text-center text-sm/6 text-gray-500">
                         Não é um membro?{' '}
-                        <Link href={"/auth/register"} className="cursor-pointer font-semibold text-indigo-600 hover:text-indigo-500">Inicie um teste gratuito de 14 dias</Link>
+                        <Link href={"/auth/register"} className="cursor-pointer font-semibold text-vermilion-600 hover:text-vermilion-500">Inicie um teste gratuito de 14 dias</Link>
                     </p>
                 </div>
             </div>

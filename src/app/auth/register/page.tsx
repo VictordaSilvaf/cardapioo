@@ -1,20 +1,17 @@
-import Image from "next/image";
 import { signup } from "../login/actions";
 import Link from "next/link";
+import Logo from "@/components/Logo";
+import { Button } from "@/components/ui/button";
 
 export default function RegisterPage() {
     return (
         <>
-            <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+            <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 bg-pampas-200">
                 <div className="sm:mx-auto sm:w-full sm:max-w-md">
-                    <Image
-                        alt="Sua Empresa"
-                        src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-                        className="mx-auto h-10 w-auto"
-                        width={40}
-                        height={40}
-                    />
-                    <h2 className="mt-6 text-center text-2xl/9 font-bold tracking-tight text-gray-900">
+                    <div className="flex justify-center items-center">
+                        <Logo />
+                    </div>
+                    <h2 className="mt-6 text-center text-2xl/9 font-bold tracking-tight text-pampas-900">
                         Crie sua conta agora mesmo
                     </h2>
                 </div>
@@ -33,7 +30,7 @@ export default function RegisterPage() {
                                         type="text"
                                         required
                                         autoComplete="name"
-                                        className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                                        className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-vermilion-600 sm:text-sm/6"
                                     />
                                 </div>
                             </div>
@@ -49,7 +46,7 @@ export default function RegisterPage() {
                                         type="email"
                                         required
                                         autoComplete="email"
-                                        className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                                        className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-vermilion-600 sm:text-sm/6"
                                     />
                                 </div>
                             </div>
@@ -65,7 +62,7 @@ export default function RegisterPage() {
                                         type="password"
                                         required
                                         autoComplete="new-password"
-                                        className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                                        className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-vermilion-600 sm:text-sm/6"
                                     />
                                 </div>
                             </div>
@@ -81,26 +78,25 @@ export default function RegisterPage() {
                                         type="password"
                                         required
                                         autoComplete="new-password"
-                                        className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                                        className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-vermilion-600 sm:text-sm/6"
                                     />
                                 </div>
                             </div>
 
                             <div>
-                                <button
+                                <Button
                                     formAction={signup}
                                     type="submit"
-                                    className="cursor-pointer flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                                >
+                                    className="w-full">
                                     Criar conta
-                                </button>
+                                </Button>
                             </div>
                         </form>
                     </div>
 
                     <p className="mt-10 text-center text-sm/6 text-gray-500">
                         Já possui uma conta?{' '}
-                        <Link href={'/auth/login'} className="cursor-pointer font-semibold text-indigo-600 hover:text-indigo-500">
+                        <Link href={'/auth/login'} className="cursor-pointer font-semibold text-vermilion-600 hover:text-vermilion-500">
                             Entrar
                         </Link>
                     </p>
