@@ -189,7 +189,7 @@ export default function Home() {
               </div>
             </div>
             <div className="mt-16 sm:mt-24 lg:mt-0 lg:shrink-0 lg:grow">
-              <svg role="img" viewBox="0 0 366 729" className="mx-auto w-[22.875rem] max-w-full drop-shadow-xl">
+              <svg role="img" viewBox="0 0 366 729" className="mx-auto w-[22.875rem] max-w-full drop-shadow-xl relative">
                 <title>App screenshot</title>
                 <defs>
                   <clipPath id="2ade4387-9c63-4fc4-b754-10e687a0d332">
@@ -209,12 +209,14 @@ export default function Home() {
                   height={684}
                   clipPath="url(#2ade4387-9c63-4fc4-b754-10e687a0d332)"
                   transform="translate(24 24)"
+                  className='relative'
                 >
                   <Image
                     alt=""
                     src={"/dash.jpeg"}
-                    fill={true}
-                    className='h-full object-cover'
+                    width={316}
+                    height={684}
+                    className='h-full object-cover relative'
                   />
                 </foreignObject>
               </svg>

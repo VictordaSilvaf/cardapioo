@@ -20,6 +20,7 @@ import { Button } from "./ui/button";
 import { LayoutDashboardIcon, UserIcon } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Logo from "./Logo";
+import { logout } from "@/app/auth/login/actions";
 
 
 const navigation = [
@@ -149,6 +150,15 @@ export default function Header() {
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
                     {user ? (
                         <>
+                            <form>
+                                <Button
+                                    formAction={logout}
+                                    type="submit"
+                                    variant={'outline'}
+                                    className="mr-4">
+                                    Sair
+                                </Button>
+                            </form>
                             <Link href="/app/profile" className="mr-4">
                                 <Button variant="outline" className="aspect-square">
                                     <UserIcon className="text-vermilion-700" />
