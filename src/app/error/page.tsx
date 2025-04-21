@@ -50,6 +50,7 @@ export default function ErrorPage() {
                     src="https://images.unsplash.com/photo-1470847355775-e0e3c35a9a2c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1825&q=80"
                     className="absolute inset-0 size-full object-cover"
                     height={1280}
+                    width={1920}
                 />
             </div>
         </div>

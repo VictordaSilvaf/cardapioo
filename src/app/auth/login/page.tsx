@@ -163,7 +163,7 @@ export default function LoginPage() {
 
                     <p className="mt-10 text-center text-sm/6 text-gray-500">
                         Não é um membro?{' '}
-                        <Link href={"/register"} className="cursor-pointer font-semibold text-indigo-600 hover:text-indigo-500">Inicie um teste gratuito de 14 dias</Link>
+                        <Link href={"/auth/register"} className="cursor-pointer font-semibold text-indigo-600 hover:text-indigo-500">Inicie um teste gratuito de 14 dias</Link>
                     </p>
                 </div>
             </div>

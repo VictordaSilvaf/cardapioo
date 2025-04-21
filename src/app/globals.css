@@ -41,6 +41,30 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  --color-vermilion-50: #fff4ed;
+  --color-vermilion-100: #ffe6d4;
+  --color-vermilion-200: #ffc8a8;
+  --color-vermilion-300: #ffa270;
+  --color-vermilion-400: #ff6f37;
+  --color-vermilion-500: #ff5722;
+  --color-vermilion-600: #f02e06;
+  --color-vermilion-700: #c71e07;
+  --color-vermilion-800: #9e1a0e;
+  --color-vermilion-900: #7f190f;
+  --color-vermilion-950: #450805;
+  
+  --color-pampas-50: #f9f6f3;
+  --color-pampas-100: #f4efea;
+  --color-pampas-200: #e1d3c7;
+  --color-pampas-300: #ceb6a3;
+  --color-pampas-400: #b9957e;
+  --color-pampas-500: #ab7c64;
+  --color-pampas-600: #9e6b58;
+  --color-pampas-700: #83574b;
+  --color-pampas-800: #6b4841;
+  --color-pampas-900: #583d36;
+  --color-pampas-950: #2e1f1c;
 }
 
 @media (prefers-color-scheme: light) {
