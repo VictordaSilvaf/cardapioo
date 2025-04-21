@@ -32,7 +32,6 @@ export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const [user, setUser] = useState<User>()
     const pathname = usePathname();
-    console.log('mobileMenuOpen', mobileMenuOpen)
 
     useEffect(() => {
         async function getUser() {
