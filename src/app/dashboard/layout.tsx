@@ -15,6 +15,6 @@ export default async function Layout({
   }
 
   return (
-    <div className="pt-24 bg-neutral-100 min-h-screen h-full">{children}</div>
+    <div className="bg-neutral-100 min-h-screen h-full">{children}</div>
   );
 }

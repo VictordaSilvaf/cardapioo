@@ -2,7 +2,7 @@
 
 import { Popcorn } from "lucide-react";
 import Avatars from "./ui/Avatars";
-import ButtonHeader from "./ui/ButtonsHeader";
+import { Button } from "@/components/ui/button";
 
 export default function Header() {
   return (
@@ -12,36 +12,53 @@ export default function Header() {
           <Avatars text="F" color="bg-black" />
         </div>
         <div className="buttons-header flex items-center gap-2">
-          <ButtonHeader
-            icon={<Popcorn className="size-4" />}
-            href="#"
-            text="Lorem"
-          />
-          <ButtonHeader
-            icon={<Popcorn className="size-4" />}
-            href="#"
-            text="Lorem"
-          />
-          <ButtonHeader
-            icon={<Popcorn className="size-4" />}
-            href="#"
-            text="Lorem"
-          />
-          <ButtonHeader
-            icon={<Popcorn className="size-4" />}
-            href="#"
-            text="Planos"
-          />
-          <ButtonHeader
-            icon={<Popcorn className="size-4" />}
-            href="#"
-            text="Lorem"
-          />
-          <ButtonHeader
-            icon={<Popcorn className="size-4" />}
-            href="#"
-            text="Lorem"
-          />
+          <Button
+            variant="default"
+            className=""
+          >
+            <Popcorn className="size-4" />
+            <p>Lorem</p>
+          </Button>
+
+          <Button
+            variant="outline"
+            className="bg-neutral-50 hover:bg-neutral-200"
+          >
+            <Popcorn className="size-4" />
+            <p>Lorem</p>
+          </Button>
+
+          <Button
+            variant="outline"
+            className="bg-neutral-50 hover:bg-neutral-200"
+          >
+            <Popcorn className="size-4" />
+            <p>Lorem</p>
+          </Button>
+
+          <Button
+            variant="outline"
+            className="bg-neutral-50 hover:bg-neutral-200"
+          >
+            <Popcorn className="size-4" />
+            <p>Lorem</p>
+          </Button>
+
+          <Button
+            variant="outline"
+            className="bg-neutral-50 hover:bg-neutral-200"
+          >
+            <Popcorn className="size-4" />
+            <p>Lorem</p>
+          </Button>
+
+          <Button
+            variant="outline"
+            className="bg-neutral-50 hover:bg-neutral-200"
+          >
+            <Popcorn className="size-4" />
+            <p>Lorem</p>
+          </Button>
         </div>
       </div>
     </div>
