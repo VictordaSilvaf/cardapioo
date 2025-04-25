@@ -14,6 +14,7 @@ import {
     XMarkIcon,
 } from '@heroicons/react/24/outline'
 import Header from './Header'
+import Avatars from './ui/Avatars'
 
 export default function Aside() {
 
@@ -35,7 +36,7 @@ export default function Aside() {
     return (
         <>
             <div>
-                
+
                 <Dialog open={sidebarOpen} onClose={setSidebarOpen} className="relative z-50 lg:hidden">
                     <DialogBackdrop
                         transition
@@ -58,11 +59,7 @@ export default function Aside() {
                             {/* Sidebar component, swap this element with another sidebar if you like */}
                             <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-white px-6 pb-2">
                                 <div className="flex h-16 shrink-0 items-center">
-                                    <img
-                                        alt="Your Company"
-                                        src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-                                        className="h-8 w-auto"
-                                    />
+                                    <span className="uppercase font-bold text-xl text-vermilion-600">Mynu</span>
                                 </div>
                                 <nav className="flex flex-1 flex-col">
                                     <ul role="list" className="flex flex-1 flex-col gap-y-7">
@@ -135,7 +132,7 @@ export default function Aside() {
                                             </li>
                                         ))}
 
-                                       
+
                                     </ul>
                                 </li>
 
@@ -164,11 +161,7 @@ export default function Aside() {
                     <div className="flex-1 text-sm/6 font-semibold text-gray-900">Dashboard</div>
                     <a href="#">
                         <span className="sr-only">Your profile</span>
-                        <img
-                            alt=""
-                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                            className="size-8 rounded-full bg-gray-50"
-                        />
+                        <Avatars text="F" color="bg-black" />
                     </a>
                 </div>
 
