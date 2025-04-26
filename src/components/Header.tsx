@@ -69,7 +69,7 @@ export default function Header() {
                         <DrawerContent className="px-2">
                             <DrawerHeader>
                                 <div className="flex items-center justify-between mb-6 pt-2">
-                                    <a href="#" className="-m-1.5 p-1.5">
+                                    <button type="button" className="-m-1.5 p-1.5">
                                         <span className="sr-only">Your Company</span>
                                         <Image
                                             alt=""
@@ -78,7 +78,7 @@ export default function Header() {
                                             width={40}
                                             height={40}
                                         />
-                                    </a>
+                                    </button>
                                     <button
                                         type="button"
                                         onClick={() => setMobileMenuOpen(false)}
@@ -164,7 +164,7 @@ export default function Header() {
                                     <UserIcon className="text-vermilion-700" />
                                 </Button>
                             </Link>
-                            <Link href="/app" className="">
+                            <Link href="/dashboard" className="">
                                 <Button variant="default" className="">
                                     <LayoutDashboardIcon />
                                     Dashboard
