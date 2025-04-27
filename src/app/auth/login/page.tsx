@@ -86,9 +86,9 @@ export default function LoginPage() {
                             </div>
 
                             <div className="text-sm/6">
-                                <a href="#" className="font-semibold text-vermilion-600 hover:text-vermilion-500">
+                                <button type="button" className="font-semibold text-vermilion-600 hover:text-vermilion-500">
                                     Esqueceu a senha?
-                                </a>
+                                </button>
                             </div>
                         </div>
 

@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { CheckIcon, XMarkIcon as XMarkIconMini } from '@heroicons/react/20/solid'
 import { RadioGroup, RadioGroupItem } from '@radix-ui/react-radio-group'
 import { Label } from '@radix-ui/react-label'
+import PaymentButton from '@/components/PaymentButton'
 
 const pricing = {
   frequencies: [
@@ -199,22 +200,10 @@ export default function Prices() {
                             >{`Cobrança ${frequency.label}`}</p>
                           </div>
                         </div>
-                        <a
-                          href={tier.href}
-                          aria-describedby={tier.id}
-                          className={classNames(
-                            tier.featured
-                              ? 'bg-vermilion-600 shadow-xs hover:bg-vermilion-500 focus-visible:outline-vermilion-600'
-                              : 'bg-white/10 hover:bg-white/20 focus-visible:outline-white',
-                            'rounded-md px-3 py-2 text-center text-sm/6 font-semibold text-white focus-visible:outline-2 focus-visible:outline-offset-2 duration-300',
-                          )}
-                        >
-                          Escolher este plano
-                        </a>
+                        <PaymentButton tier={tier} >Escolher este plano</PaymentButton>
                       </div>
                       <div className="mt-8 flow-root sm:mt-10">
                         <ul
-                          role="list"
                           className={classNames(
                             tier.featured
                               ? 'divide-gray-900/5 border-gray-900/5 text-gray-600'
