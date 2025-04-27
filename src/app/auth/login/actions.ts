@@ -46,7 +46,7 @@ export async function logout() {
   const { error } = await supabase.auth.signOut();
 
   if (error) {
-    console.log("Error logging out:", error);
+    console.error("Error logging out:", error);
     redirect("/error");
   }
 

@@ -9,8 +9,6 @@ export default async function MenuPage() {
         data: { user },
     } = await (await supabase).auth.getUser()
 
-    console.log(user)
-
     const subscription = await fetchSubscriptionByEmail(user?.email ?? '')
 
     if (!subscription) redirect("/dashboard/payment");
