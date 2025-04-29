@@ -1,5 +1,6 @@
 import { EllipsisIcon } from "lucide-react";
 import { FC } from "react";
+import Image from "next/image";
 
 interface ProductItemProps {
   name: string;
@@ -8,14 +9,22 @@ interface ProductItemProps {
   price: string;
 }
 
-const ProductItem: FC<ProductItemProps> = ({ name, ingredients, photo, price }) => {
+const ProductItem: FC<ProductItemProps> = ({
+  name,
+  ingredients,
+  photo,
+  price,
+}) => {
   return (
     <li>
       <div className="flex items-center justify-between">
         <div className="flex items-start gap-3">
-          <img
-            className="w-20 h-20 object-cover rounded-2xl border border-gray-200 shadow-sm p-1"
+          <Image
+            className="w-20 h-20 object-cover rounded-2xl border border-gray-200 p-1"
             src={photo}
+            alt={name}
+            width={80}
+            height={80}
           />
           <div className="flex flex-col">
             <h2 className="font-bold">{name}</h2>
@@ -25,9 +34,7 @@ const ProductItem: FC<ProductItemProps> = ({ name, ingredients, photo, price }) 
           </div>
         </div>
 
-        <div className="text-sm font-bold">
-            { price }
-        </div>
+        <div className="text-sm font-bold">{price}</div>
 
         <div className="cursor-pointer transition-all rounded-full p-1 hover:bg-gray-100">
           <EllipsisIcon size={20} />
