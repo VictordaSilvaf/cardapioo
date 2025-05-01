@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Header() {
   return (
-    <div className="header mb-5">
+    <div className="header p-5">
       <div className="flex items-center gap-10">
         <div>
           <Avatars text="F" color="bg-black" />
