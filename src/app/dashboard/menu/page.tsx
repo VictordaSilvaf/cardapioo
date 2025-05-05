@@ -1,11 +1,22 @@
+'use client';
+
 import { createClient } from "@/utils/supabase/server";
 import Aside from "../components/Aside";
 import { fetchSubscriptionByEmail } from "@/lib/stripe";
-import { redirect } from "next/navigation";
 import ProductItem from "../components/ProductItem";
 import { PlusIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Heading from "../components/ui/Heading";
+
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import GroupInput from "../components/GroupInput";
+import { useState } from "react";
 
 export default async function MenuPage() {
   const lanchesMcDonalds = [
@@ -76,15 +87,39 @@ export default async function MenuPage() {
 
   // if (!subscription) redirect("/dashboard/payment");
 
+  const [name, setName] = useState<string>("");
+  const [description, SheetDescription] = useState<string>("");
+  const [price, setPrice] = useState<string>("");
+
   return (
     <Aside>
       <Heading
         title="Meus Produtos"
         rightContent={
-          <Button variant="destructive" className="rounded-full" size="lg">
-            <PlusIcon size={16} />
-            Adicionar novo
-          </Button>
+          <Sheet>
+            <SheetTrigger>
+              <Button variant="destructive" className="rounded-full" size="lg">
+                <PlusIcon size={16} />
+                Adicionar novo
+              </Button>
+            </SheetTrigger>
+            <SheetContent
+              style={{ maxWidth: "670px" }}
+              side="right"
+              className="max-w-2xl w-full border border-gray-200"
+            >
+              <SheetHeader className="p-0">
+                <SheetTitle className="border-b border-gray-200 p-5">
+                  Novo Produto
+                </SheetTitle>
+                <div className="p-5">
+                  <div className="flex flex-col gap-y-10">
+                    <GroupInput value={name} setValue={setName} label="Nome" />
+                  </div>
+                </div>
+              </SheetHeader>
+            </SheetContent>
+          </Sheet>
         }
       />
 

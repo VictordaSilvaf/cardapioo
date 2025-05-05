@@ -10,17 +10,6 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog";
 
 interface ProductItemProps {
   name: string;
@@ -37,22 +26,7 @@ const ProductItem: FC<ProductItemProps> = ({
 }) => {
   return (
     <li>
-      {/* <AlertDialog>
-        <AlertDialogTrigger>Open</AlertDialogTrigger>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
-            <AlertDialogDescription>
-              This action cannot be undone. This will permanently delete your
-              account and remove your data from our servers.
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction>Continue</AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog> */}
+    
 
       <div className="flex items-center justify-between">
         <div className="flex items-start gap-3">
@@ -71,7 +45,7 @@ const ProductItem: FC<ProductItemProps> = ({
           </div>
         </div>
 
-        <div className="text-sm font-bold">{price}</div>
+        <div className="text-sm font-bold text-vermilion-600">{price}</div>
 
         <div className="">
           <DropdownMenu>

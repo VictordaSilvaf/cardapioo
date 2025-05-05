@@ -4,13 +4,6 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-import {
-  Dialog,
-  DialogBackdrop,
-  DialogPanel,
-  TransitionChild,
-} from "@headlessui/react";
-
 import Header from "./Header";
 import Avatars from "./ui/Avatars";
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -50,78 +43,6 @@ export default function Aside(props) {
   return (
     <div>
       {/* Mobile Sidebar */}
-      <Dialog
-        open={sidebarOpen}
-        onClose={setSidebarOpen}
-        className="relative z-50 lg:hidden"
-      >
-        <DialogBackdrop className="fixed inset-0 bg-gray-900/80 transition-opacity" />
-        <div className="fixed inset-0 flex">
-          <DialogPanel className="relative mr-16 flex w-full max-w-xs flex-1 transform transition-transform duration-300 ease-in-out data-closed:-translate-x-full">
-            <TransitionChild>
-              <div className="absolute top-0 left-full flex w-16 justify-center pt-5">
-                <button
-                  type="button"
-                  onClick={() => setSidebarOpen(false)}
-                  className="-m-2.5 p-2.5"
-                >
-                  <span className="sr-only">Close sidebar</span>
-                  <XIcon className="size-6 text-white" />
-                </button>
-              </div>
-            </TransitionChild>
-
-            <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-white px-6 pb-2">
-              <div className="flex h-16 shrink-0 items-center">
-                <span className="uppercase font-bold text-xl text-vermilion-600">
-                  Mynu
-                </span>
-              </div>
-              <nav className="flex flex-1 flex-col">
-                <ul className="flex flex-1 flex-col gap-y-7">
-                  <li>
-                    <ul className="-mx-2 space-y-1">
-                      {navigation.map((item) => (
-                        <li key={item.name}>
-                          <Link
-                            href={item.href}
-                            className={cn(
-                              buttonVariants({
-                                variant: item.current ? "default" : "ghost",
-                                size: "icon",
-                              }),
-                              "justify-start px-4 w-full group duration-300"
-                            )}
-                          >
-                            <item.icon
-                              size={16}
-                              className={classNames(
-                                item.current
-                                  ? "text-white"
-                                  : "text-neutral-600 group-hover:text-vermilion-600",
-                                "shrink-0"
-                              )}
-                            />
-                            <p
-                              className={classNames(
-                                item.current
-                                  ? "text-white"
-                                  : "text-neutral-600 group-hover:text-vermilion-600"
-                              )}
-                            >
-                              {item.name}
-                            </p>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </DialogPanel>
-        </div>
-      </Dialog>
 
       <Header />
 
